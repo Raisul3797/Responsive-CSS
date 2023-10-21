@@ -16,6 +16,25 @@
             background-color: greenyellow;
             border: 1px solid red;            
         }
+        @media screen and (max-width: 600px) {
+            
+            .devices{
+            display: flex;
+            gap: 10px;
+        }
+    }
+        .desktop{
+            height: 600px;
+            width: 450px;
+            border: 2px solid blueviolet;
+            justify-content: center;
+            align-items: center;
+        }
+        .mobile{
+            height: 400px;
+            width: 300px;
+            border: 2px solid brown;
+        }
     </style>
 </head>
 <body>
@@ -41,6 +60,15 @@
         <div class="item">Item - 18</div>
         <div class="item">Item - 19</div>
         <div class="item">Item - 20</div>
+    </div>
+    <h1>Responsive</h1>
+    <div class="devices">
+        <div class="desktop">
+            Left
+        </div>
+        <div class="mobile">
+            Right
+        </div>
     </div>
 </body>
 </html>
