@@ -4,8 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid Layout</title>
+    <style>
+        .header, .nav, .main, .sidebar,.advertise,.footer{
+            background-color: bisque;
+            border: 2px solid tomato;
+            border-radius: 5px;
+            padding: 15px;
+            
+        }
+        .header{
+            grid-area: header;
+        }
+        .nav{
+            grid-area: nav;
+        }
+        .main{
+            grid-area: main;
+        }
+        .sidebar{
+            grid-area: sidebar;
+            margin-bottom: 20px;
+            /* grid-column: span 2; */
+        }
+        .advertise{
+            grid-area: advertise;
+            /* margin-top: 50px; */
+        }
+        .footer{
+            grid-area: footer;
+        }
+        aside{
+            margin-bottom: 10px;
+        }
+        p{
+            text-align: justify;
+        }
+        .container{
+            gap: 20px;
+            display: grid;
+            grid-template-areas: 
+            "header header header header"
+            "nav main main sidebar"
+            "nav main main advertise"
+            "footer footer footer footer"
+            
+            ;
+        }
+    </style>
 </head>
-<body>
-    
+<body class="container">
+    <header class="header">
+        <h2>The Header</h2>
+    </header>
+    <nav class="nav">
+        <ul>
+            <li><a href="">Nav - 1</a></li>
+            <li><a href="">Nav - 2</a></li>
+            <li><a href="">Nav - 3</a></li>
+        </ul>
+    </nav>
+    <main class="main">
+        <h2>The Main</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quaerat earum, laudantium illum minima ducimus quis obcaecati repellat inventore, nemo aut eius fuga iste, odit rerum vel doloribus debitis architecto eveniet amet voluptate ullam nostrum maiores. Omnis in laborum dignissimos quod obcaecati laboriosam pariatur ab veniam. Fugiat asperiores suscipit laboriosam?</p>
+
+    </main>
+    <aside>
+        <div class="sidebar">
+            <h4>Sidebar</h4>
+        </div>
+        <div class="advertise">
+            <h4>Advertise</h4>
+        </div>
+    </aside>
+    <footer class="footer">
+        <h4>The Footer</h4>
+    </footer>
 </body>
 </html>
